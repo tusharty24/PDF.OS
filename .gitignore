@@ -1,0 +1,7 @@
+node_modules
+dist
+.next
+PdfEditor/node_modules
+PdfEditor/.next
+.codex
+*.tsbuildinfo
