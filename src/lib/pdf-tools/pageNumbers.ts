@@ -7,7 +7,7 @@ export async function addPageNumbers(file: File): Promise<Blob> {
   const pages = doc.getPages();
   pages.forEach((page, i) => {
     const { width } = page.getSize();
-    const text = \`\${i + 1}\`;
+    const text = `${i + 1}`;
     const fontSize = 10;
     const textWidth = font.widthOfTextAtSize(text, fontSize);
     page.drawText(text, {

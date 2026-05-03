@@ -24,7 +24,7 @@ export async function fillAndFlattenForm(
         (field as any).select(value);
       }
     } catch (e) {
-      console.warn(\`Could not set field \${name}:\`, e);
+      console.warn(`Could not set field ${name}:`, e);
     }
   }
 

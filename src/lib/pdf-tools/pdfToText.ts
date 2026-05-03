@@ -9,7 +9,7 @@ export async function pdfToText(file: File): Promise<string> {
     const page = await pdf.getPage(i);
     const content = await page.getTextContent();
     const strings = content.items.map((item: any) => item.str).join(' ');
-    fullText += \`--- Page \${i} ---\\n\${strings}\\n\\n\`;
+    fullText += `--- Page ${i} ---\n${strings}\n\n`;
   }
   return fullText;
 }

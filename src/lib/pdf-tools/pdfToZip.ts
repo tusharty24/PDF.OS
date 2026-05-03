@@ -6,7 +6,7 @@ export async function pdfToZip(file: File): Promise<Blob> {
   const zip = new JSZip();
   imageBlobs.forEach((blob, i) => {
     const pageNum = String(i + 1).padStart(3, '0');
-    zip.file(\`page-\${pageNum}.png\`, blob);
+    zip.file(`page-${pageNum}.png`, blob);
   });
   return await zip.generateAsync({ type: 'blob' });
 }
